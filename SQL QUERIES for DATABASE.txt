@@ -1,0 +1,37 @@
+SET PASSWORD FOR 'root'@'localhost' = PASSWORD('12345');
+
+alter user 'root'@'localhost' identified by '12345';
+
+drop database gmail;
+
+create database gmail;
+
+use gmail;
+
+create table createaccount(first_name VARCHAR(25),last_name VARCHAR(25),email VARCHAR(90),password VARCHAR(90),mobile VARCHAR(20),security_question VARCHAR(90),security_question_answer VARCHAR(90),alt_email VARCHAR(90));
+
+create table mobile(item_name VARCHAR(99),price int);
+
+insert into mobile values('iphone 7',69999);
+
+insert into mobile values('surface phone',80000);
+
+insert into mobile values('moto z force',60000);
+
+insert into mobile values('google pixel',60000);
+
+insert into mobile values('iphone 6s plus',55000);
+
+insert into mobile values('lumia 950 xl',49000);
+
+insert into mobile values('moto g4 plus',20000);
+
+insert into mobile values('nexus 6p',40000);
+
+create table orders(item_name varchar(99),quantity int(5),name varchar(99),address varchar(99),mobile varchar(12),state varchar(20),city varchar(30),pincode int(6),total_price varchar(20),payment_type varchar(20));
+
+create table cart(email varchar(99),item_name varchar(99),quantity varchar(8),subtotal varchar(10));
+
+insert into createaccount values('testing','testing','t','t','8347292820','testing','testing','t');
+
+insert into createaccount values('Seller','Seller','S','seller','8347292820','who are you to snapdeal?','seller','seller@gmail.com');
